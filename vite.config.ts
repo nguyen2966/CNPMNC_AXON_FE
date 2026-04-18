@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       // Local dev: proxy /api → Render backend (same target as Vercel rewrite)
       '/api': {
-        target: 'https://cnpmnc-axon-be.onrender.com',
+        target: 'http://localhost:8080',
         changeOrigin: true,
         secure: true,
       },

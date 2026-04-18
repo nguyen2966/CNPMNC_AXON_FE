@@ -10,3 +10,11 @@ export interface UserRes {
 export interface LoginReq { email: string; password: string; }
 export interface AssignRoleReq { role: UserRole; }
 export interface UpdateUserStatusReq { isActive: boolean; }
+export interface UpdateDepartmentReq { departmentId: string | null; }
+export interface CreateUserReq {
+  email: string;
+  password: string;
+  fullName: string;
+  role?: UserRole;
+  departmentId?: string;
+}
