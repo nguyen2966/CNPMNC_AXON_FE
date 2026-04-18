@@ -6,9 +6,11 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
+      // Local dev: proxy /api → Render backend (same target as Vercel rewrite)
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://cnpmnc-axon-be.onrender.com',
         changeOrigin: true,
+        secure: true,
       },
     },
   },
